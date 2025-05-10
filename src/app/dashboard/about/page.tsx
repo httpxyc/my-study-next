@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Page() {
   return (
-    <div>hello word</div>
+    <div>about content</div>
   )
 }
