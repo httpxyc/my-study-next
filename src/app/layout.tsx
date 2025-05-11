@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Comforter } from "next/font/google";
-import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import "./globals.css";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
