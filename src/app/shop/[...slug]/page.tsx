@@ -1,4 +1,5 @@
 "use client";
+import BackHomeButton from "@/components/back-home";
 import CenterLayoutIndex from "@/components/center-layout";
 import { Button } from "antd";
 import React, { useState } from "react";
@@ -13,6 +14,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
       <Button type="primary" onClick={() => setCount(count + 1)}>
         click me
       </Button>
+      <BackHomeButton></BackHomeButton>
     </CenterLayoutIndex>
   );
 }
