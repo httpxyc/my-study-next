@@ -6,7 +6,7 @@ export default function HeroLayoutIndex({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-center justify-center w-full h-screen">
+    <div className="flex flex-col items-center justify-center w-full h-screen">
       {children}
     </div>
   );
