@@ -1,47 +1,16 @@
-"use client";
 import BackHomeButton from "@/components/back-home";
-import { Avatar, List } from "antd";
-import Link from "next/link";
+import { Metadata } from "next";
 import React from "react";
+import ShopList from "./components/ShopList";
 
-const data = [
-  {
-    id: "1",
-    title: "Ant Design Title 1",
-  },
-  {
-    id: "2",
-    title: "Ant Design Title 2",
-  },
-  {
-    id: "3",
-    title: "Ant Design Title 3",
-  },
-  {
-    id: "4",
-    title: "Ant Design Title 4",
-  },
-];
+export const metadata: Metadata = {
+  title: "shop list",
+};
+
 export default function page() {
   return (
     <div>
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={(item, index) => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={
-                <Avatar
-                  src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${index}`}
-                />
-              }
-              title={<Link href={"shop/" + item.id}>{item.title}</Link>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-            />
-          </List.Item>
-        )}
-      />
+      <ShopList></ShopList>
       <BackHomeButton></BackHomeButton>
     </div>
   );

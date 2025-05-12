@@ -1,20 +1,14 @@
-"use client";
-import BackHomeButton from "@/components/back-home";
-import CenterLayoutIndex from "@/components/center-layout";
-import { Button } from "antd";
-import React, { useState } from "react";
+import React from "react";
+import { Index } from ".";
 
-export default function Page({ params }: { params: { slug: string[] } }) {
-  const [count, setCount] = useState(0);
-  return (
-    <CenterLayoutIndex>
-      <h1 className="text-4xl">
-        shop {params?.slug?.[0]} page: {count}
-      </h1>
-      <Button type="primary" onClick={() => setCount(count + 1)}>
-        click me
-      </Button>
-      <BackHomeButton></BackHomeButton>
-    </CenterLayoutIndex>
-  );
+interface IParams {
+  params: { slug: string[] };
+}
+export const generateMetadata = ({ params }: IParams) => {
+  return {
+    title: "shop" + params.slug?.[0],
+  };
+};
+export default function Page({ params }: IParams) {
+  return <Index id={params?.slug?.[0]}></Index>;
 }
